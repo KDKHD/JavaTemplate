@@ -1,0 +1,22 @@
+server:
+  port: 8080
+  forward-headers-strategy: FRAMEWORK
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:15432/postgres
+    username: postgres
+    password: changeme
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+app:
+  cors:
+    allowedOrigins: https://heezy.dev/ # Comma separated list of allowed origins
